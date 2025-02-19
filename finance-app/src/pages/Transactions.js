@@ -1,25 +1,36 @@
+import React, { useState, useEffect } from "react";
+
 function Transactions() {
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    fetch("/assets/data/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setTransactions(data.transactions);
+      })
+      .catch((error) => console.error("Error fetching data: ", error));
+  }, []);
+
   return (
     <div>
-      <h1 className="page-title">Transactions</h1>
-
-      <main>
-
-        <section>
-          <div className="transaction-container">
-            <div className="transaction-item">
-              <h2 className="transaction-name">Bravo Zen Spa</h2>
-              <p className="transaction-category">Personal Care</p>
-              <p className="transaction-date">29 Aug 2024</p>
-              <h2 className="transaction-amount">-$25.00</h2>
-            </div>  
+      <h1>Transactions</h1>
+      <div className="transaction-container">
+        {transactions.map((transaction, index) => (
+          <div className="transaction-item" key={index}>
+            <img src={transaction.avatar} alt={transaction.name} />
+            <div className="transaction-details">
+              <p className="transaction-name">{transaction.name}</p>
+              <p className="transaction-date">{new Date(transaction.date).toLocaleDateString()}</p>
+              <p className="transaction-category">{transaction.category}</p>
+            </div>
+            <div className="transaction-amount">{transaction.amount}</div>
           </div>
-        </section>
-
-      </main>
-      
+        ))}
+      </div>
     </div>
   );
+ 
 }
 
 export default Transactions;
