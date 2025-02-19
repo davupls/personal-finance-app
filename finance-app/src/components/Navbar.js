@@ -5,6 +5,7 @@ function Navbar() {
         <nav>
             <ul>
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/transactions">Transactions</Link></li>
                 <li><Link to="/budgets">Budgets</Link></li>
                 <li><Link to="/pots">Pots</Link></li>
                 <li><Link to="/recurrring">Reccurring Bills</Link></li>
