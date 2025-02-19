@@ -1,0 +1,15 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.home-title {
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.home-description {
+    color: #555;
+    font-size: 18px;
+}
