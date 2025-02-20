@@ -10,7 +10,6 @@ import "./assets/css/style.css"; // Import my CSS
 function App() {
   return (
     <Router>
-      <Navbar />
       <main>
         <Routes>
           <Route path="/" element = {<Home />} />
@@ -20,6 +19,7 @@ function App() {
           <Route path ="/recurring" element = {<Recurring />} />
         </Routes>
       </main>
+      <Navbar />
     </Router>
   );
 }
