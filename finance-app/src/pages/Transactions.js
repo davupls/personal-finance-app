@@ -30,7 +30,9 @@ function Transactions() {
             <p className="transaction-name text-preset-4">{transaction.name}</p>
             <p className="transaction-date text-preset-5">{new Date(transaction.date).toLocaleDateString()}</p>
             <p className="transaction-category text-preset-5">{transaction.category}</p>
-            <p className="transaction-amount text-preset-4">{transaction.amount}</p>
+            <p className="transaction-amount text-preset-4">
+              {transaction.amount < 0 ? `-$${Math.abs(transaction.amount)}` : `$${transaction.amount}`}
+            </p>
             <hr className="hr" />
           </div>
         ))}

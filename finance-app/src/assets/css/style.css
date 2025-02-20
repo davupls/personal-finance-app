@@ -181,12 +181,15 @@ p {
   .pagination button {
     margin: 0 5px;
     padding: 8px 12px;
-    border: none;
-    background-color: var(--grey-300);
+    border: 1px solid var(--beige-500);
+    border-radius: 8px;
+    background-color: var(--white);
     cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
   
   .pagination button.active {
-    background-color: var(--secondary-green);
+    background-color: var(--grey-900);
     color: white;
   }
