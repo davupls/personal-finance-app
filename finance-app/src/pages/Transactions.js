@@ -22,15 +22,15 @@ function Transactions() {
 
   return (
     <div>
-      <h1>Transactions</h1>
+      <h1 className="text-preset-1">Transactions</h1>
       <div className="transaction-container">
         {currentTransactions.map((transaction, index) => (
           <div className="transaction-item" key={index}>
             <img className="transaction-image" src={transaction.avatar} alt={transaction.name} />
-            <p className="transaction-name">{transaction.name}</p>
-            <p className="transaction-date">{new Date(transaction.date).toLocaleDateString()}</p>
-            <p className="transaction-category">{transaction.category}</p>
-            <p className="transaction-amount">{transaction.amount}</p>
+            <p className="transaction-name text-preset-4">{transaction.name}</p>
+            <p className="transaction-date text-preset-5">{new Date(transaction.date).toLocaleDateString()}</p>
+            <p className="transaction-category text-preset-5">{transaction.category}</p>
+            <p className="transaction-amount text-preset-4">{transaction.amount}</p>
             <hr className="hr" />
           </div>
         ))}

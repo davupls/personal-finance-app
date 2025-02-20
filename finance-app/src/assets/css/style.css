@@ -27,6 +27,51 @@
     --white: #FFFFFF;
 }
 
+@font-face {
+    font-family: "Public Sans";
+    src: url("../../../public/assets/fonts/PublicSans-VariableFont_wght.ttf") format("truetype");
+}
+
+.text-preset-1 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 120%;
+    letter-spacing: 0px;
+}
+
+.text-preset-2 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 120%;
+    letter-spacing: 0px;
+}
+
+.text-preset-3 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-preset-4 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-preset-5 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
 body {
     margin: 0;
     padding: 24px 16px;
@@ -98,10 +143,12 @@ p {
 
 .transaction-date {
     grid-area: item-d;
+    justify-self: end;
 }
 
 .transaction-amount {
     grid-area: item-e;
+    justify-self: end;
 }
 
 .transaction-item {
