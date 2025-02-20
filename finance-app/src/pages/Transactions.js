@@ -18,14 +18,14 @@ function Transactions() {
       <div className="transaction-container">
         {transactions.map((transaction, index) => (
           <div className="transaction-item" key={index}>
-            <img src={transaction.avatar} alt={transaction.name} />
-            <div className="transaction-details">
-              <p className="transaction-name">{transaction.name}</p>
-              <p className="transaction-date">{new Date(transaction.date).toLocaleDateString()}</p>
-              <p className="transaction-category">{transaction.category}</p>
-            </div>
-            <div className="transaction-amount">{transaction.amount}</div>
+            <img className="transaction-image" src={transaction.avatar} alt={transaction.name} />
+            <p className="transaction-name">{transaction.name}</p>
+            <p className="transaction-date">{new Date(transaction.date).toLocaleDateString()}</p>
+            <p className="transaction-category">{transaction.category}</p>
+            <p className="transaction-amount">{transaction.amount}</p>
+            <hr className="hr" />
           </div>
+         
         ))}
       </div>
     </div>
