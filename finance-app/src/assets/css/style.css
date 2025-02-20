@@ -74,7 +74,7 @@ p {
 
 .transaction-container {
     background-color: var(--white);
-    border-radius: 12px;
+    border-radius: 12px 12px 0px 0px;
     padding: 24px 20px;
 }
 
@@ -122,3 +122,24 @@ p {
     margin: 16px 0;
     width: 100%;
 }
+
+.pagination {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--grey-300);
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: var(--secondary-green);
+    color: white;
+  }
